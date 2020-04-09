@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Library Manager System</title>
+</head>
+<body>
+<h1 align="center">Borrow Book</h1>
+<div align="center">
+    <h2> Borrow book by cno and bno</h2>
+    <form action="borrow" method="post">
+        {% csrf_token %}
+        {{ form1 }}
+        <input type="submit" value="Submit"/>
+    </form>
+    <span>{{ message }}</span>
+    <br/>
+    <h2> Select book by cno</h2>
+    <form action="select/cno" method="post">
+        {% csrf_token %}
+        {{ form2 }}
+        <input type="submit" value="Submit"/>
+    </form>
+</div>
+
+</body>
+</html>
